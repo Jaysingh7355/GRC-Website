@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import DarkModeToggle from "../lightDark/DarkModeToggle";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,7 +23,6 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
-        {/* Logo - Always Visible */}
         <Link href="/" className="relative group">
           <Image
             src="/logo.png"
@@ -82,9 +82,12 @@ const Header: React.FC = () => {
 
         {/* Contact Details & Button - Always Visible */}
         <div className="hidden md:flex items-center space-x-3 lg:space-x-4 flex-shrink-0">
+          <a href="">
+            <DarkModeToggle />
+          </a>
           <a
             href="tel:+919876543210"
-            className="text-gray-700 hover:text-black flex items-center whitespace-nowrap"
+            className="text-blue-700 hover:text-blue-100 flex items-center whitespace-nowrap"
           >
             📞 +91 7355989418
           </a>
