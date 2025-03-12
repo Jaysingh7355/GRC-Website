@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Yantramanav } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -15,6 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const yantramanav = Yantramanav({
+  variable: "--font-yantramanav",
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+});
+
 export const metadata: Metadata = {
   title: "GRC Varanasi - Best GRC Solutions",
   description:
@@ -27,13 +33,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${yantramanav.variable}`}
+      suppressHydrationWarning
+    >
       <body className="flex flex-col  min-h-screen">
-        <Header />
-        <ThemeProvider>
-          <main className="flex-1 pt-34">{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
         </ThemeProvider>
-        <Footer />
       </body>
     </html>
   );

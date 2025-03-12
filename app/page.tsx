@@ -1,9 +1,11 @@
 import Image from "next/image";
 import CardGrid from "./components/card";
+import Banner from "./components/banner";
 
 export default function Home() {
   return (
     <div>
+      <Banner/>
       <CardGrid />
       <CardGrid />
       <CardGrid />

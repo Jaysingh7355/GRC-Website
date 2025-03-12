@@ -1,38 +1,36 @@
 "use client";
 
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
 
-export default function DarkModeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <button className="p-2 rounded-full bg-white dark:bg-gray-800 transition">
-        <Sun size={20} className="text-gray-800 dark:text-blue-800" />
-      </button>
-    );
-  }
-
-  const isDark = resolvedTheme === "dark";
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition hover:scale-110"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-    >
-      {isDark ? (
-        <Sun size={20} className="text-gray-800 dark:text-yellow-300" />
-      ) : (
-        <Moon size={20} className="text-gray-900 dark:text-gray-100" />
-      )}
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        >
+          {theme === "dark" ? (
+            <Moon className="h-[1.2rem] w-[1.2rem]" />
+          ) : (
+            <Sun className="h-[1.2rem] w-[1.2rem]" />
+          )}
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+    </DropdownMenu>
   );
 }
