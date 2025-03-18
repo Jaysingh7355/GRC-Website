@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             href="/pages/products"
             className="hover:text-primar transition whitespace-nowrap py-2"
           >
-            GRC Products
+            our Products
           </Link>
           <Link
             href="/pages/projects"
@@ -138,7 +138,7 @@ const Header: React.FC = () => {
           {[
             ["Home", "/"],
             ["About Us", "/pages/about"],
-            ["GRC Products", "/pages/products"],
+            ["our Products", "/pages/products"],
             ["Our Project", "/pages/projects"],
             ["Our Brochure", "/pages/brochure"],
             ["Latest News", "/pages/news"],
