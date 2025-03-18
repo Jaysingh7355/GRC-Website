@@ -5,6 +5,7 @@ import CardGrid from "./components/card";
 import Banner from "./components/banner";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import About from "./components/intro/about";
 interface StatProps {
   value: number;
   label: string;
@@ -46,6 +47,17 @@ export default function Home() {
   return (
     <div>
       <Banner />
+      <div>
+        <About
+
+
+
+        
+          title="Why Choose Us?"
+          description="Varanasi GRC is one of the most experienced GRC companies in India and a leading manufacturer and supplier of Glass Reinforced Concrete (GRC), Glass Reinforced Plastic (GRP), and Glass Reinforced Gypsum (GRG) products. We specialize in high-quality architectural and decorative solutions for villas, mosques, temples, and commercial buildings.."
+          imageUrl="/slide1.png"
+        />
+      </div>
       <section className="py-12 bg-black" id="projects">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -55,6 +67,7 @@ export default function Home() {
             Explore our latest GRC projects, showcasing durability and aesthetic
             appeal.
           </p>
+
           <div className="flex justify-between items-center">
             <button
               onClick={prevSlide}
