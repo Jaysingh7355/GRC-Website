@@ -15,7 +15,7 @@ const GrcCard: React.FC<GrcCardProps> = ({
   imageUrl,
   buttonText,
 }) => {
-  const whatsappNumber = "917355989418"; // Replace with your WhatsApp number
+  const whatsappNumber = "917355989418"; 
 
   const handleWhatsAppClick = () => {
     const whatsappURL = `https://wa.me/${whatsappNumber}`;
@@ -27,7 +27,6 @@ const GrcCard: React.FC<GrcCardProps> = ({
       <img src={imageUrl} alt={title} className="w-full h-52 object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm mb-4">{description}</p>
         <div className="flex gap-2">
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
             {buttonText}
