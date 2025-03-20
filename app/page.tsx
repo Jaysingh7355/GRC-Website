@@ -49,10 +49,6 @@ export default function Home() {
       <Banner />
       <div>
         <About
-
-
-
-        
           title="Why Choose Us?"
           description="Varanasi GRC is one of the most experienced GRC companies in India and a leading manufacturer and supplier of Glass Reinforced Concrete (GRC), Glass Reinforced Plastic (GRP), and Glass Reinforced Gypsum (GRG) products. We specialize in high-quality architectural and decorative solutions for villas, mosques, temples, and commercial buildings.."
           imageUrl="/slide1.png"
