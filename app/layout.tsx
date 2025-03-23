@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const yantramanav = Yantramanav({
   variable: "--font-yantramanav",
   subsets: ["latin"],
-  weight: ["400", "700"], 
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

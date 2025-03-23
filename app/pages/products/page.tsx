@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiPhone, FiMail } from "react-icons/fi";
+import { Button } from "@/components/ui/button";
 
 const products = [
   {
@@ -64,7 +65,7 @@ const products = [
   },
   {
     name: "GRC Fountains",
-    image: "grc_fountains",
+    image: "grc_fountain",
   },
   {
     name: "GRC Sculpture And Mural",
@@ -118,21 +119,21 @@ const ProductPage = () => {
         {products.map((product, index) => (
           <div key={index} className="bg-card p-6 rounded-lg shadow-md border">
             <Image
-              src={`/image/products/${product.image}.jpg`}
+              src={`/product/${product.image}.jpg`}
               alt={product.name}
               width={400}
               height={250}
               className="rounded-lg mb-4 object-cover w-full h-48"
+              priority={index < 3}
             />
             <h2 className="text-xl font-semibold text-foreground mb-4">
               {product.name}
             </h2>
-            <Link
-              href={`/pages/products/${generateSlug(product.name)}`}
-              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors inline-block w-full text-center"
-            >
-              View Details
-            </Link>
+            <Button asChild variant="outline" className="w-full">
+              <Link href={`/pages/products/${generateSlug(product.name)}`}>
+                View Details
+              </Link>
+            </Button>
           </div>
         ))}
       </div>
@@ -147,10 +148,10 @@ const ProductPage = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6 text-primary text-lg">
           <a
-            href="tel:+919412716027"
+            href="tel:+7355989418"
             className="flex items-center gap-2 justify-center hover:text-primary/80"
           >
-            <FiPhone /> +91 9412716027
+            <FiPhone /> +91 735989418
           </a>
           <a
             href="mailto:varanasigrcconstruction7355@gmail.com"
