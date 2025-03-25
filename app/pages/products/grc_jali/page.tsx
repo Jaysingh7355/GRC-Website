@@ -3,6 +3,15 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
+const images = {
+  1: "/product/1.jpg",
+  2: "/product/2.jpg",
+  3: "/product/3.jpg",
+  4: "/product/4.jpg",
+  5: "/product/5.jpg",
+  6: "/product/6.jpg",
+};
+
 export default function GRCJaliPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -155,17 +164,19 @@ export default function GRCJaliPage() {
       <section className="py-16 px-6 lg:px-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {[1, 2, 3, 4, 5, 6].map((img) => (
-            <Card key={img} className="aspect-square">
+          {Object.entries(images).map(([key, src]) => (
+            <Card key={key} className="aspect-square relative overflow-hidden">
               <Image
-                src={`/gallery/jali-${img}.jpg`}
-                alt={`GRC Jali Installation ${img}`}
+                src={src}
+                alt={`GRC Jali Installation ${key}`}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 33vw"
               />
             </Card>
           ))}
         </div>
+        ;
       </section>
 
       {/* CTA */}
