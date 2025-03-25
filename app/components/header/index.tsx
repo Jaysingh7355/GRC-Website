@@ -70,12 +70,6 @@ const Header: React.FC = () => {
             Our Brochure
           </Link>
           <Link
-            href="/pages/news"
-            className="hover:text-primar transition whitespace-nowrap py-2"
-          >
-            Latest News
-          </Link>
-          <Link
             href="/pages/contact"
             className="hover:text-primar transition whitespace-nowrap py-2"
           >
@@ -141,7 +135,6 @@ const Header: React.FC = () => {
             ["our Products", "/pages/products"],
             ["Our Project", "/pages/projects"],
             ["Our Brochure", "/pages/brochure"],
-            ["Latest News", "/pages/news"],
             ["Contact Us", "/pages/contact"],
           ].map(([title, url]) => (
             <Link

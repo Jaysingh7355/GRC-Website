@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
+import WhatsAppButton from "./components/whatsapp/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ const geistMono = Geist_Mono({
 const yantramanav = Yantramanav({
   variable: "--font-yantramanav",
   subsets: ["latin"],
-  weight: ["400", "700"], 
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 pt-20">{children}</main>
           <Footer />
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>
