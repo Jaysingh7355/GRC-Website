@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Yantramanav } from "next/font/google";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -34,19 +42,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${yantramanav.variable}`}
-      suppressHydrationWarning
-    >
-      <body className="flex flex-col  min-h-screen">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <main className="flex-1 pt-20">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html
+        lang="en"
+        className={`${geistSans.variable} ${geistMono.variable} ${yantramanav.variable}`}
+        suppressHydrationWarning
+      >
+        <body className="flex flex-col  min-h-screen">
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
+            <main className="flex-1 pt-20">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
