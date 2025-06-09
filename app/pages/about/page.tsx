@@ -118,11 +118,11 @@ const AboutUsPage: React.FC = () => {
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
           <div className="p-6">
-            <div className="text-4xl font-bold text-primary mb-2">250+</div>
+            <div className="text-4xl font-bold text-primary mb-2">150+</div>
             <div className="text-muted-foreground">Completed Projects</div>
           </div>
           <div className="p-6 border-x">
-            <div className="text-4xl font-bold text-primary mb-2">15M+</div>
+            <div className="text-4xl font-bold text-primary mb-2">5k+</div>
             <div className="text-muted-foreground">SQFT Installed</div>
           </div>
           <div className="p-6">

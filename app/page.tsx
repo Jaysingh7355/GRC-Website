@@ -4,8 +4,11 @@ import Image from "next/image";
 import CardGrid from "./components/card";
 import Banner from "./components/banner";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 import About from "./components/intro/about";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 interface StatProps {
   value: number;
   label: string;
@@ -32,18 +35,23 @@ export default function Home() {
   const projectsPerPage = 3;
   const totalProjects = projects.length;
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex + projectsPerPage) % totalProjects
     );
-  };
+  }, [totalProjects]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex(
       (prevIndex) =>
         (prevIndex - projectsPerPage + totalProjects) % totalProjects
     );
-  };
+  }, [totalProjects]);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 2000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
   return (
     <div>
       <Banner />
@@ -54,51 +62,51 @@ export default function Home() {
           imageUrl="/slide1.png"
         />
       </div>
-      <section className="py-12 bg-black" id="projects">
+      <section className="py-12 bg-[hsl(var(--background))]" id="projects">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold text-center text-[hsl(var(--primary))] mb-6">
             Our Projects
           </h2>
-          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-center text-[hsl(var(--primary))] mb-10 max-w-2xl mx-auto">
             Explore our latest GRC projects, showcasing durability and aesthetic
             appeal.
           </p>
 
-          <div className="flex justify-between items-center">
-            <button
-              onClick={prevSlide}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-            >
-              priv
-            </button>
-            <div className="grid md:grid-cols-3 gap-8">
-              {projects
-                .slice(currentIndex, currentIndex + projectsPerPage)
-                .map((project) => (
-                  <div
-                    key={project.id}
-                    className="bg-white rounded-lg shadow-lg overflow-hidden"
-                  >
-                    <Image
-                      src={project.image}
-                      alt={`Project ${project.id}`}
-                      width={900}
-                      height={750}
-                      className="w-full h-56 object-cover"
-                    />
-                  </div>
-                ))}
+          <div className="flex items-center flex-grow mx-7 ">
+            <Button onClick={prevSlide} variant="outline" className="ml-4">
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+            <div className="mx-auto">
+              <div className="grid md:grid-cols-3 gap-8">
+                {projects
+                  .slice(currentIndex, currentIndex + projectsPerPage)
+                  .map((project) => (
+                    <motion.div
+                      key={project.id}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="bg-white rounded-lg shadow-lg overflow-hidden w-[380px] h-[220px]"
+                    >
+                      <Image
+                        src={project.image}
+                        alt={`Project ${project.id}`}
+                        width={900}
+                        height={750}
+                        className="w-full h-56 object-cover"
+                      />
+                    </motion.div>
+                  ))}
+              </div>
             </div>
-            <button
-              onClick={nextSlide}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-            >
-              Next
-            </button>
+
+            <Button onClick={nextSlide} variant="outline" className="mr-4">
+              <ChevronRight className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[hsl(var(--background))]">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -119,16 +127,19 @@ export default function Home() {
                 desc: "Historic building restoration using traditional techniques",
               },
             ].map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div
+                key={index}
+                className="bg-[hsl(var(--background)) p-6 rounded-lg shadow-md"
+              >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.desc}</p>
+                <p className="text-[hsl(var(--primary))">{service.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[hsl(var(--background))">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             Technical Excellence
@@ -153,8 +164,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CardGrid />
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-[hsl(var(--background))">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             Client Experiences
@@ -172,7 +182,10 @@ export default function Home() {
                 text: "Reliable timelines and professional execution for large-scale installations",
               },
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div
+                key={index}
+                className="bg-[hsl(var(--background)) p-6 rounded-lg shadow-md"
+              >
                 <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
                 <div className="font-bold">{testimonial.name}</div>
                 <div className="text-gray-500 text-sm">{testimonial.role}</div>
@@ -181,7 +194,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[hsl(var(--background))">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">
             Material Advantages
@@ -189,7 +202,7 @@ export default function Home() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-gray-100">
+                <tr className="bg-[hsl(var(--background))">
                   <th className="p-4 text-left">Property</th>
                   <th className="p-4">GRC</th>
                   <th className="p-4">Concrete</th>
@@ -212,26 +225,6 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Accreditations
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {["iso9001", "gst", "msme", "startup-india"].map((logo, index) => (
-              <div key={index} className="flex items-center justify-center">
-                <Image
-                  src={`/certifications/${logo}.png`}
-                  alt="Certification"
-                  width={120}
-                  height={120}
-                  className="grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
