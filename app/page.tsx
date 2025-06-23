@@ -98,7 +98,143 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "GRC Facades",
+                icon: "🏗️",
+                desc: "Custom-designed exterior solutions with weather-resistant properties",
+              },
+              {
+                title: "Architectural Elements",
+                icon: "🎨",
+                desc: "Decorative columns, cornices, and ornamental features",
+              },
+              {
+                title: "Restoration",
+                icon: "🔨",
+                desc: "Historic building restoration using traditional techniques",
+              },
+            ].map((service, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Technical Excellence
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: "30+ MPa", label: "Compressive Strength" },
+              { value: "50+ Years", label: "Durability" },
+              { value: "A1 Class", label: "Fire Rating" },
+              { value: "ISO 9001", label: "Certification" },
+            ].map((spec, index) => (
+              <div
+                key={index}
+                className="text-center p-6 bg-gray-100 rounded-lg"
+              >
+                <div className="text-2xl font-bold text-blue-600 mb-2">
+                  {spec.value}
+                </div>
+                <div className="text-gray-700">{spec.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <CardGrid />
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Client Experiences
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Aman Gupta",
+                role: "Architect",
+                text: "Exceptional quality and attention to detail in all GRC elements supplied",
+              },
+              {
+                name: "Priya Sharma",
+                role: "Project Manager",
+                text: "Reliable timelines and professional execution for large-scale installations",
+              },
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+                <div className="font-bold">{testimonial.name}</div>
+                <div className="text-gray-500 text-sm">{testimonial.role}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Material Advantages
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="p-4 text-left">Property</th>
+                  <th className="p-4">GRC</th>
+                  <th className="p-4">Concrete</th>
+                  <th className="p-4">Wood</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Weight (kg/m³)", "1800-2000", "2400", "500-900"],
+                  ["Maintenance", "Low", "High", "High"],
+                  ["Lifespan", "50+ Years", "30 Years", "15 Years"],
+                ].map((row, index) => (
+                  <tr key={index} className="border-b">
+                    {row.map((cell, cellIndex) => (
+                      <td key={cellIndex} className="p-4">
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Accreditations
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {["iso9001", "gst", "msme", "startup-india"].map((logo, index) => (
+              <div key={index} className="flex items-center justify-center">
+                <Image
+                  src={`/certifications/${logo}.png`}
+                  alt="Certification"
+                  width={120}
+                  height={120}
+                  className="grayscale hover:grayscale-0 transition-all"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

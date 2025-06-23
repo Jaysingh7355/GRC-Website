@@ -19,7 +19,6 @@ const About: React.FC<AboutProps> = ({
   return (
     <section className="py-12 bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-6">
-        
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -35,7 +34,6 @@ const About: React.FC<AboutProps> = ({
           />
         </motion.div>
 
-        
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -49,7 +47,9 @@ const About: React.FC<AboutProps> = ({
             {description}
           </p>
           <Link href="/pages/about">
-            <Button variant="default" className="mt-2">Learn More</Button>
+            <Button variant="default" className="mt-2">
+              Learn More
+            </Button>
           </Link>
         </motion.div>
       </div>

@@ -95,7 +95,6 @@ const projects = [
     location: "Bangalore",
     category: "Commercial",
   },
-
 ];
 
 export default function ProjectsPage() {
