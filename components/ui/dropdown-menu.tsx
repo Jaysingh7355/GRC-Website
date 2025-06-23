@@ -7,9 +7,7 @@ import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
+import { cn } from "@/lib/utils";
 
 function DropdownMenu({
   ...props
