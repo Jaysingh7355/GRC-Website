@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           </Link>
           <Link
             href="/pages/products"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className="hover:text-text-primary transition whitespace-nowrap py-2"
           >
             our Products
           </Link>
@@ -127,7 +127,7 @@ const Header: React.FC = () => {
           isOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <nav className="bg-gray-100   flex flex-col items-center space-y-3 p-4">
+        <nav className="bg-background   flex flex-col items-center space-y-3 p-4">
           {/* Mobile menu items */}
           {[
             ["Home", "/"],
