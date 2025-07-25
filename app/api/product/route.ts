@@ -1,27 +1,29 @@
-
 import { NextResponse } from "next/server";
-import Product from '@/lib/models/product'
+import Product from "@/lib/models/product";
 import connectDB from "@/lib/db";
 
 type ApiResponse = {
   success: boolean;
-  data?: any;
+  data: string;
   error?: string;
   validationErrors?: Record<string, string>;
 };
 
-export async function POST(request: Request) {
-  const response: ApiResponse = { success: false };
+export async function POST(request: Request): Promise<Response> {
+  const response: ApiResponse = {
+    success: false,
+    data: "",
+  };
 
   try {
     // 1. Connect to database
     await connectDB();
 
     // 2. Parse and validate request body
-    let requestBody;
+    let requestBody: { name?: string; image?: string };
     try {
       requestBody = await request.json();
-    } catch (e) {
+    } catch {
       return NextResponse.json(
         { ...response, error: "Invalid JSON format" },
         { status: 400 }
@@ -50,22 +52,29 @@ export async function POST(request: Request) {
 
     // 4. Create and save product
     const product = new Product({
-      name: requestBody.name.trim(),
-      image: requestBody.image.trim(),
+      name: (requestBody.name ?? "").trim(),
+      image: (requestBody.image ?? "").trim(),
     });
 
     await product.save();
 
     // 5. Return successful response
     return NextResponse.json({ success: true, data: product }, { status: 201 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API Error:", error);
 
     // Handle Mongoose validation errors
-    if (error.name === "ValidationError") {
+    if (
+      error &&
+      typeof error === "object" &&
+      (error as { name?: string }).name === "ValidationError"
+    ) {
       const validationErrors: Record<string, string> = {};
-      for (const field in error.errors) {
-        validationErrors[field] = error.errors[field].message;
+      const mongooseError = error as {
+        errors: Record<string, { message: string }>;
+      };
+      for (const field in mongooseError.errors) {
+        validationErrors[field] = mongooseError.errors[field].message;
       }
       return NextResponse.json(
         { ...response, error: "Validation failed", validationErrors },

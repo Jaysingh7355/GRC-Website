@@ -40,7 +40,7 @@ const ContactUs = () => {
             </span>
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions? Get in touch with our team – we're here to help.
+            Have questions? Get in touch with our team we&apos;re here to help.
           </p>
         </div>
 

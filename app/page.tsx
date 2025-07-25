@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import CardGrid from "./components/card";
 import Banner from "./components/banner";
 import { motion } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
@@ -9,10 +8,6 @@ import { Button } from "@/components/ui/button";
 import About from "./components/intro/about";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-interface StatProps {
-  value: number;
-  label: string;
-}
 
 const projects = [
   { id: 1, image: "/project/project.png" },
@@ -186,7 +181,7 @@ export default function Home() {
                 key={index}
                 className="bg-[hsl(var(--background)) p-6 rounded-lg shadow-md"
               >
-                <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-4">{testimonial.text}</p>
                 <div className="font-bold">{testimonial.name}</div>
                 <div className="text-gray-500 text-sm">{testimonial.role}</div>
               </div>
