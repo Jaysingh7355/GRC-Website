@@ -1,7 +1,7 @@
 // app/pages/projects/page.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { FiMail, FiPhone } from "react-icons/fi";
 
 const projects = [

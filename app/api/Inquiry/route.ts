@@ -17,8 +17,12 @@ export const GET = async (req: Request) => {
     const limit = parseInt(searchParams.get("limit") || "10");
     const sort = searchParams.get("sort") || "-createdAt";
 
+    type InquiryQuery = {
+      status?: "pending" | "resolved" | "archived";
+    };
+
     // Build query
-    const query: any = {};
+    const query: InquiryQuery = {};
     if (status) query.status = status;
 
     // Get paginated results

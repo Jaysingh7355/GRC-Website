@@ -90,7 +90,7 @@ export default function Banner() {
         <button
           onClick={() => navigateSlide("next")}
           aria-label="Next slide"
-          className="p-2 hover:bg-primary/80 rounded-full transition-colors"
+          className="p-2 hover:bg--primary rounded-full transition-colors"
         >
           <ArrowRight className="w-8 h-8 text-white" />
         </button>

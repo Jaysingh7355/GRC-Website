@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Yantramanav } from "next/font/google";
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  // SignInButton,
+  // SignUpButton,
+  // SignedIn,
+  // SignedOut,
+  // UserButton,
 } from "@clerk/nextjs";
 import "./globals.css";
 import Header from "./components/header";

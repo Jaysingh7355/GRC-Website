@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 interface GrcCardProps {
   title: string;
@@ -9,13 +10,8 @@ interface GrcCardProps {
   buttonText: string;
 }
 
-const GrcCard: React.FC<GrcCardProps> = ({
-  title,
-  description,
-  imageUrl,
-  buttonText,
-}) => {
-  const whatsappNumber = "917355989418"; 
+const GrcCard: React.FC<GrcCardProps> = ({ title, imageUrl, buttonText }) => {
+  const whatsappNumber = "917355989418";
 
   const handleWhatsAppClick = () => {
     const whatsappURL = `https://wa.me/${whatsappNumber}`;
@@ -24,7 +20,7 @@ const GrcCard: React.FC<GrcCardProps> = ({
 
   return (
     <div className="border rounded-lg shadow-lg overflow-hidden max-w-sm">
-      <img src={imageUrl} alt={title} className="w-full h-52 object-cover" />
+      <Image src={imageUrl} alt={title} className="w-full h-52 object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <div className="flex gap-2">
