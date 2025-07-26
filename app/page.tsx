@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import About from "./components/intro/about";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-
 const projects = [
   { id: 1, image: "/project/project.png" },
   { id: 2, image: "/project/project1.png" },
@@ -27,38 +26,57 @@ const projects = [
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const projectsPerPage = 3;
+  const [projectsPerPage, setProjectsPerPage] = useState(3);
   const totalProjects = projects.length;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setProjectsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        setProjectsPerPage(2);
+      } else {
+        setProjectsPerPage(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex + projectsPerPage) % totalProjects
     );
-  }, [totalProjects]);
+  }, [projectsPerPage, totalProjects]);
 
   const prevSlide = useCallback(() => {
     setCurrentIndex(
       (prevIndex) =>
         (prevIndex - projectsPerPage + totalProjects) % totalProjects
     );
-  }, [totalProjects]);
+  }, [projectsPerPage, totalProjects]);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 2000);
+    const interval = setInterval(nextSlide, 4000);
     return () => clearInterval(interval);
   }, [nextSlide]);
+
   return (
     <div>
       <Banner />
       <div>
         <About
           title="Why Choose Us?"
-          description="Varanasi GRC is one of the most experienced GRC companies in India and a leading manufacturer and supplier of Glass Reinforced Concrete (GRC), Glass Reinforced Plastic (GRP), and Glass Reinforced Gypsum (GRG) products. We specialize in high-quality architectural and decorative solutions for villas, mosques, temples, and commercial buildings.."
+          description="Varanasi GRC is one of the most experienced GRC companies in India and a leading manufacturer and supplier of Glass Reinforced Concrete (GRC), Glass Reinforced Plastic (GRP), and Glass Reinforced Gypsum (GRG) products. We specialize in high-quality architectural and decorative solutions for villas, mosques, temples, and commercial buildings."
           imageUrl="/slide1.png"
         />
       </div>
+
+      {/* Our Projects Section */}
       <section className="py-12 bg-[hsl(var(--background))]" id="projects">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[hsl(var(--primary))] mb-6">
             Our Projects
           </h2>
@@ -67,44 +85,53 @@ export default function Home() {
             appeal.
           </p>
 
-          <div className="flex items-center flex-grow mx-7 ">
-            <Button onClick={prevSlide} variant="outline" className="ml-4">
+          <div className="flex items-center justify-center flex-wrap gap-4">
+            <Button
+              onClick={prevSlide}
+              variant="outline"
+              className="hidden sm:inline-flex"
+            >
               <ChevronLeft className="h-5 w-5" />
             </Button>
-            <div className="mx-auto">
-              <div className="grid md:grid-cols-3 gap-8">
-                {projects
-                  .slice(currentIndex, currentIndex + projectsPerPage)
-                  .map((project) => (
-                    <motion.div
-                      key={project.id}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                      className="bg-white rounded-lg shadow-lg overflow-hidden w-[380px] h-[220px]"
-                    >
-                      <Image
-                        src={project.image}
-                        alt={`Project ${project.id}`}
-                        width={900}
-                        height={750}
-                        className="w-full h-56 object-cover"
-                      />
-                    </motion.div>
-                  ))}
-              </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {projects
+                .slice(currentIndex, currentIndex + projectsPerPage)
+                .map((project) => (
+                  <motion.div
+                    key={project.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs sm:max-w-sm"
+                  >
+                    <Image
+                      src={project.image}
+                      alt={`Project ${project.id}`}
+                      width={900}
+                      height={750}
+                      className="w-full h-48 object-cover"
+                    />
+                  </motion.div>
+                ))}
             </div>
 
-            <Button onClick={nextSlide} variant="outline" className="mr-4">
+            <Button
+              onClick={nextSlide}
+              variant="outline"
+              className="hidden sm:inline-flex"
+            >
               <ChevronRight className="h-5 w-5" />
             </Button>
           </div>
         </div>
       </section>
+
+      {/* Our Services Section */}
       <section className="py-16 bg-[hsl(var(--background))]">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "GRC Facades",
@@ -124,22 +151,24 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-[hsl(var(--background)) p-6 rounded-lg shadow-md"
+                className="bg-[hsl(var(--background))] p-6 rounded-lg shadow-md"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-[hsl(var(--primary))">{service.desc}</p>
+                <p className="text-[hsl(var(--primary))]">{service.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[hsl(var(--background))">
-        <div className="container mx-auto px-6">
+
+      {/* Technical Excellence Section */}
+      <section className="py-16 bg-[hsl(var(--background))]">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             Technical Excellence
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { value: "30+ MPa", label: "Compressive Strength" },
               { value: "50+ Years", label: "Durability" },
@@ -159,12 +188,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[hsl(var(--background))">
-        <div className="container mx-auto px-6">
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-[hsl(var(--background))]">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             Client Experiences
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 name: "Aman Gupta",
@@ -179,7 +210,7 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-[hsl(var(--background)) p-6 rounded-lg shadow-md"
+                className="bg-[hsl(var(--background))] p-6 rounded-lg shadow-md"
               >
                 <p className="text-gray-600 mb-4">{testimonial.text}</p>
                 <div className="font-bold">{testimonial.name}</div>
@@ -189,15 +220,17 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[hsl(var(--background))">
-        <div className="container mx-auto px-6">
+
+      {/* Material Comparison Section */}
+      <section className="py-16 bg-[hsl(var(--background))]">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             Material Advantages
           </h2>
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[hsl(var(--background))">
+                <tr className="bg-[hsl(var(--background))]">
                   <th className="p-4 text-left">Property</th>
                   <th className="p-4">GRC</th>
                   <th className="p-4">Concrete</th>

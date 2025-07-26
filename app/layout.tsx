@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Yantramanav } from "next/font/google";
+import dynamic from "next/dynamic";
 
 import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+// import Header from "./components/header";
+const Header = dynamic(() => import("@/app/components/header"));
+
+const Footer = dynamic(() => import("@/app/components/footer"));
+// import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme/ThemeProvider";
-import WhatsAppButton from "./components/whatsapp/WhatsAppButton";
+const WhatsAppButton = dynamic(
+  () => import("@/app/components/whatsapp/WhatsAppButton")
+);
+// import WhatsAppButton from "./components/whatsapp/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

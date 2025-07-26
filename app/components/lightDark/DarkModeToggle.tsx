@@ -20,6 +20,7 @@ export function ModeToggle() {
           variant="outline"
           size="icon"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          // className="hover:bg-chart-2"
         >
           {theme === "dark" ? (
             <Moon className="h-[1.2rem] w-[1.2rem]" />

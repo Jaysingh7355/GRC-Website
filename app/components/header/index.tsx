@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "../lightDark/DarkModeToggle";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -26,14 +32,21 @@ const Header: React.FC = () => {
         {/* Logo - Fixed position */}
         <div className="flex-shrink-0">
           <Link href="/" className="relative group">
-            <Image
-              src="/logo.png"
-              alt="GRC Logo"
-              width={50}
-              height={50}
-              className="rounded-full object-cover h-[50px] w-[50px] transition-opacity group-hover:opacity-90"
-              priority
-            />
+            <Tooltip>
+              <TooltipTrigger>
+                <Image
+                  src="/logo.png"
+                  alt="GRC Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full object-cover h-[50px] w-[50px] transition-opacity group-hover:opacity-90"
+                  priority
+                />
+                <TooltipContent>
+                  <p>Home</p>
+                </TooltipContent>
+              </TooltipTrigger>
+            </Tooltip>
           </Link>
         </div>
 
@@ -41,37 +54,37 @@ const Header: React.FC = () => {
         <nav className="hidden lg:flex flex-nowrap items-center gap-4 xl:gap-6 font-yantramanav font-medium text-foreground text-base mx-4">
           <Link
             href="/"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className="text-primery hover:text-chart-2 transition whitespace-nowrap py-2"
           >
             Home
           </Link>
           <Link
             href="/pages/about"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className=" text-primery hover:text-chart-2 transition whitespace-nowrap py-2"
           >
             About Us
           </Link>
           <Link
             href="/pages/products"
-            className="hover:text-text-primary transition whitespace-nowrap py-2"
+            className="text-primery hover:text-chart-2 transition whitespace-nowrap py-2"
           >
             our Products
           </Link>
           <Link
             href="/pages/projects"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className="text-primery hover:text-chart-2 whitespace-nowrap py-2"
           >
             Our Project
           </Link>
           <Link
             href="/pages/brochure"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className="text-primery hover:text-chart-2 transition whitespace-nowrap py-2"
           >
             Our Brochure
           </Link>
           <Link
             href="/pages/contact"
-            className="hover:text-primar transition whitespace-nowrap py-2"
+            className="text-primery hover:text-chart-2 transition whitespace-nowrap py-2"
           >
             Contact Us
           </Link>
@@ -79,16 +92,25 @@ const Header: React.FC = () => {
 
         {/* Desktop Contact Section - Fixed position */}
         <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0">
-          <ModeToggle />
+          <div>
+            <Tooltip>
+              <TooltipTrigger>
+                <ModeToggle />
+              </TooltipTrigger>
+              <TooltipContent>
+                <span>Toggle theme</span>
+              </TooltipContent>
+            </Tooltip>
+          </div>
           <a
             href="tel:+919876543210"
-            className="text-foreground hover:text-primar flex items-center whitespace-nowrap text-base"
+            className="text-primery hover:text-chart-2 flex items-center whitespace-nowrap text-base"
           >
             📞 +91 7355989418
           </a>
           <Link
             href="/pages/contact"
-            className="text-foreground px-4 py-2 rounded-lg  transition whitespace-nowrap text-base"
+            className="text-primery hover:text-chart-2 px-4 py-2 rounded-lg  transition whitespace-nowrap text-base"
           >
             Get a Quote
           </Link>
@@ -123,11 +145,11 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-card shadow-md overflow-hidden transition-all duration-300 ${
+        className={` absolute top-full left-0 right-0 bg-card shadow-md overflow-hidden transition-all duration-300 ${
           isOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <nav className="bg-background   flex flex-col items-center space-y-3 p-4">
+        <nav className="bg-background   flex flex-col justify-center align-center space-y-3 p-4">
           {/* Mobile menu items */}
           {[
             ["Home", "/"],
@@ -140,7 +162,7 @@ const Header: React.FC = () => {
             <Link
               key={url}
               href={url}
-              className=" w-full text-center py-2 hover:bg-muted rounded-lg"
+              className=" w-full text-center text-primery hover:text-chart-2 py-2 hover:bg-muted rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               {title}
@@ -151,13 +173,13 @@ const Header: React.FC = () => {
             <ModeToggle />
             <a
               href="tel:+919876543210"
-              className="text-primary  hover:text-primary-foreground  flex items-center whitespace-nowrap py-2"
+              className="text-primery hover:text-chart-2  flex items-center whitespace-nowrap py-2"
             >
               📞 +91 7355989418
             </a>
             <Link
               href="/pages/contact"
-              className=" px-6 py-2 rounded-lg transition w-full text-center"
+              className=" px-6 py-2 rounded-lg transition w-full text-center text-primery hover:text-chart-2"
               onClick={() => setIsOpen(false)}
             >
               Get a Quote
