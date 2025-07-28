@@ -9,6 +9,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -108,11 +109,13 @@ const Header: React.FC = () => {
           >
             📞 +91 7355989418
           </a>
-          <Link
-            href="/pages/contact"
-            className="text-primery hover:text-chart-2 px-4 py-2 rounded-lg  transition whitespace-nowrap text-base"
-          >
-            Get a Quote
+          <Link href="/pages/contact" passHref legacyBehavior>
+            <Button
+              variant={"outline"}
+              className="hover:bg- shadow-md  hover:text-chart-2 px-4 py-2 rounded-lg  transition whitespace-nowrap text-base"
+            >
+              Get a Quote
+            </Button>
           </Link>
         </div>
 

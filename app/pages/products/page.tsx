@@ -125,6 +125,7 @@ const ProductPage = () => {
               height={250}
               className="rounded-lg mb-4 object-cover w-full h-48"
               priority={index < 3}
+              loading={index < 3 ? "eager" : "lazy"}
             />
             <h2 className="text-xl font-semibold text-foreground mb-4">
               {product.name}

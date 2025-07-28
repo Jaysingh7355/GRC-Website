@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Banner from "./components/banner";
+import Daynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import About from "./components/intro/about";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+const Banner = Daynamic(() => import("@/app/components/banner"));
+const About = Daynamic(() => import("@/app/components/intro/about"));
 
 const projects = [
   { id: 1, image: "/project/project.png" },
@@ -110,6 +111,7 @@ export default function Home() {
                       alt={`Project ${project.id}`}
                       width={900}
                       height={750}
+                      loading="lazy"
                       className="w-full h-48 object-cover"
                     />
                   </motion.div>

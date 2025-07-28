@@ -50,7 +50,8 @@ export default function Banner() {
               src={images[index]}
               alt={`Banner Image ${index + 1}`}
               fill
-              priority
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
               className="object-cover"
             />
           </div>
