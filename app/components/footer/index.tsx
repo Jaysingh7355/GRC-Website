@@ -65,7 +65,7 @@ const Footer = () => {
               href="http://google.com/maps/place/GRC+BANGALORE/@13.0750363,77.618897,3393m/data=!3m1!1e3!4m6!3m5!1s0x3bae3cd4d39e8f1b:0xff691460010ad9e0!8m2!3d13.0750363!4d77.618897!16s%2Fg%2F11qgs8kzfm!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
+              className="text-blue-400 hover:underline flex items-center space-x-3"
             >
               View on Google Maps
             </Link>
