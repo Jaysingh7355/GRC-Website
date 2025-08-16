@@ -57,12 +57,16 @@ const Footer = () => {
         {/* Contact Information */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-3">Contact Us</h3>
-          <p className="text-sm">123 Business Street, City, Country</p>
-          <p className="text-sm">Phone: +91 98765 43210</p>
-          <p className="text-sm">Email: info@grcsolutions.com</p>
+          <p className="text-sm">
+            Gate, Kunwar Road, near Indian Oil Petrol Pump, Belawa,
+          </p>
+          <p className="text-sm">Phone: +917355989418</p>
+          <p className="text-sm">
+            Email:varanasigrcconstruction7355@gmail.com{" "}
+          </p>
           <p className="text-sm mt-3">
             <Link
-              href="http://google.com/maps/place/GRC+BANGALORE/@13.0750363,77.618897,3393m/data=!3m1!1e3!4m6!3m5!1s0x3bae3cd4d39e8f1b:0xff691460010ad9e0!8m2!3d13.0750363!4d77.618897!16s%2Fg%2F11qgs8kzfm!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"
+              href="http://gohttps://share.google/dq8tkPxotM0CJZG00ogle.com/maps/place/GRC+BANGALORE/@13.0750363,77.618897,3393m/data=!3m1!1e3!4m6!3m5!1s0x3bae3cd4d39e8f1b:0xff691460010ad9e0!8m2!3d13.0750363!4d77.618897!16s%2Fg%2F11qgs8kzfm!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline flex items-center space-x-3"
