@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Head from "next/head";
 const Banner = Daynamic(() => import("@/app/components/banner"));
 const About = Daynamic(() => import("@/app/components/intro/about"));
 
@@ -66,6 +67,54 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Best GRC Products in India | GFRC Manufacturer Varanasi</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+          name="description"
+          content="Looking for the best GRC products in India? We are a trusted GRC & GFRC manufacturer in Varanasi providing high-quality Glass Fiber Reinforced Concrete products for architectural and construction projects."
+        />
+
+        <meta
+          name="keywords"
+          content="GRC products India, GFRC manufacturer, GRC Varanasi, Glass Fiber Reinforced Concrete, GRC cladding, GRC panels, GRC jali, GRC cornices, GRC columns, GRC design India"
+        />
+
+        <meta name="author" content="Varanasi GRC" />
+
+        <meta
+          property="og:title"
+          content="Best GRC Products in India | GFRC Manufacturer Varanasi"
+        />
+        <meta
+          property="og:description"
+          content="Explore premium quality GRC products, panels, jali, and cladding. Trusted GRC manufacturer in Varanasi serving projects across India."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://varanasigrc.com/" />
+        <meta
+          property="og:image"
+          content="https://varanasigrc.com/images/grc-banner.jpg"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Best GRC Products in India | GFRC Manufacturer Varanasi"
+        />
+        <meta
+          name="twitter:description"
+          content="Buy premium GRC & GFRC products from trusted manufacturer in Varanasi. Serving projects across India."
+        />
+        <meta
+          name="twitter:image"
+          content="https://varanasigrc.com/images/grc-banner.jpg"
+        />
+
+        <link rel="canonical" href="https://varanasigrc.com/" />
+      </Head>
       <Banner />
       <div>
         <About

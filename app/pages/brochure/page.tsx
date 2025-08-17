@@ -1,10 +1,23 @@
 "use client";
 import React from "react";
 import { FiDownload, FiPhone, FiMapPin, FiInfo } from "react-icons/fi";
+import Head from "next/head";
 
 const BrochurePage = () => {
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
+      <Head>
+        <title>Brocher | varanasi Grc </title>
+        <meta
+          name="description"
+          content="Download the official Varanasi GRC brochure to explore our GRC products including Jalis, Columns, Panels, and custom designs. Get detailed information in one place."
+        />
+        <meta
+          name="keywords"
+          content="GRC Brochure Varanasi, GRC Jali brochure, GRC product catalog, Varanasi GRC brochure download"
+        />
+      </Head>
+
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
