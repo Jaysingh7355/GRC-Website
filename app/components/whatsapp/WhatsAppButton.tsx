@@ -11,8 +11,10 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 left-6 z-50"
+      aria-label="Chat with us on WhatsApp"
     >
       <Button
+        aria-label="Chat on WhatsApp"
         className="w-16 h-16 rounded-full bg-green-700 hover:bg-green-700 text-white shadow-lg hover:shadow-xl shadow-green-400/30 hover:shadow-green-500/40 transition-all"
         variant="default"
         size="icon"
