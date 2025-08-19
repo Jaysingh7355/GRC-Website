@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const images = ["/slide1.png", "/slide2.png", "/slide3.png", "/slide5.png"];
 
@@ -70,12 +71,14 @@ export default function Banner() {
         <p className="text-lg md:text-xl mb-6 md:mb-8">
           We provide the best GRC solutions for your projects.
         </p>
-        <Button
-          size="lg"
-          className="bg-primary hover:bg-primary/90 text-lg font-semibold"
-        >
-          Get Started
-        </Button>
+        <Link href={"/pages/contact"}>
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-lg font-semibold"
+          >
+            Get Started
+          </Button>
+        </Link>
       </motion.div>
 
       {/* Navigation Controls */}

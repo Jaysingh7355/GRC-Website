@@ -30,14 +30,20 @@ const BrochurePage = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-6 text-muted-foreground">
               <div className="flex items-center gap-2">
                 <FiMapPin className="text-primary" />
-                <span>Yelachanakyanapura, 35NH Bangalore, 562114</span>
+                <span>
+                  Gate, Kunwar Road, near Indian Oil Petrol Pump, Belawa,
+                  varanasi
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <FiPhone className="text-primary" />
                 <div>
-                  <span>9412716027</span>
+                  <span>Phone: +917355989418</span>
                   <span className="mx-2">|</span>
-                  <span>8722931915</span>
+                </div>
+                <FiPhone className="text-primary inline" />
+                <div>
+                  <span>Phone: +919108538301</span>
                 </div>
               </div>
             </div>
@@ -67,7 +73,7 @@ const BrochurePage = () => {
               </div>
               <div>
                 <a
-                  href="/Varanasi_GRC_CONSTRUCTION_Brochure_01.pdf"
+                  href="public/Brochure.pdf"
                   download
                   className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200 flex items-center justify-center gap-2"
                 >

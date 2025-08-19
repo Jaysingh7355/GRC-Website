@@ -123,7 +123,7 @@ export default function GRCJaliPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 px-6 lg:px-16 bg-muted">
+      <section className="py-16 px-6 lg:px-16 bg-muted rounded-2xl">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Material Comparison
         </h2>
@@ -193,7 +193,7 @@ export default function GRCJaliPage() {
             <Button variant="secondary" asChild>
               <a href="tel:+7355989418">📞 Call +91 735598 9418</a>
             </Button>
-            <Button variant="secondary" asChild>
+            <Button variant="link" asChild>
               <a href="mailto:varanasigrcconstruction7355@gmail.com">
                 ✉️ Email Inquiry
               </a>

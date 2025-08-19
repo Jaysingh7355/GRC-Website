@@ -79,7 +79,7 @@ export default function Home() {
 
         <meta
           name="keywords"
-          content="GRC products India, GFRC manufacturer, GRC Varanasi, Glass Fiber Reinforced Concrete, GRC cladding, GRC panels, GRC jali, GRC cornices, GRC columns, GRC design India"
+          content="GRC products India,grc jali india GFRC manufacturer, GRC Varanasi, Glass Fiber Reinforced Concrete, GRC cladding, GRC panels, GRC jali, GRC cornices, GRC columns, GRC design India"
         />
 
         <meta name="author" content="Varanasi GRC" />
@@ -102,7 +102,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Best GRC Products in India | GFRC Manufacturer Varanasi"
+          content="Best GRC Products in India | GFRC Manufacturer Varanasi| GRC in Banglore"
         />
         <meta
           name="twitter:description"
