@@ -31,14 +31,42 @@ export default function GRCJaliPage() {
               Decorative yet Functional Architectural Elements for Modern
               Facades
             </p>
-            <Button variant="outline" className="text-white" asChild>
+            <Button variant="link" className="text-white" asChild>
               <a href="/pages/contact">Get Custom Quote</a>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
+      {/* Introduction Section */}
+      <section className="py-16 px-6 lg:px-16 ">
+        <div className="max-w-8xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative left-50  w-110 h-80 md:h-full rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/product/1.jpg"
+              alt="Traditional and Modern GRC Jali Design"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-6">What is GRC Jali?</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              A <strong>Jali</strong> is a perforated decorative screen
+              traditionally used in Indian architecture. Designed with intricate
+              geometric or floral patterns, it allows air and light to pass
+              through while maintaining privacy.
+              <br />
+              <br />
+              <strong>GRC Jali</strong> (Glassfiber Reinforced Concrete Jali) is
+              a modern adaptation of this heritage element. It combines the
+              strength of concrete with lightweight glass fibers, making it
+              highly durable, weather-resistant, and suitable for both
+              traditional and contemporary facades.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="py-16 px-6 lg:px-16">
         <h2 className="text-3xl font-bold text-center mb-12">
           Why Choose GRC Jali?
@@ -69,9 +97,7 @@ export default function GRCJaliPage() {
           ))}
         </div>
       </section>
-
-      {/* Technical Specifications */}
-      <section className="bg-card py-16 px-6 lg:px-16">
+      <section className="py-16 px-6 lg:px-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Technical Details</h2>
           <div className="grid gap-6">
@@ -95,7 +121,6 @@ export default function GRCJaliPage() {
         </div>
       </section>
 
-      {/* Applications */}
       <section className="py-16 px-6 lg:px-16">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Common Applications
@@ -123,7 +148,7 @@ export default function GRCJaliPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 px-6 lg:px-16 bg-muted rounded-2xl">
+      <section className="py-16 px-6 lg:px-16  rounded-2xl">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Material Comparison
         </h2>
@@ -160,8 +185,7 @@ export default function GRCJaliPage() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-16 px-6 lg:px-16">
+      <section className="py-8 px-6 lg:px-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Object.entries(images).map(([key, src]) => (
@@ -182,7 +206,8 @@ export default function GRCJaliPage() {
       {/* CTA */}
       <section
         id="contact"
-        className="py-16 px-6 lg:px-16 bg-primary text-white"
+        className="py-10 px-12 lg:px-16 bg-muted/60 rounded-2xl  shadow-lg m-8 border-2
+         "
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your Project</h2>

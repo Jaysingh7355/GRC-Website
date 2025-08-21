@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const planter = () => {
-  return (
-    <div>planter</div>
-  )
-}
+  return <div>planter</div>;
+};
 
-export default planter
+export default planter;

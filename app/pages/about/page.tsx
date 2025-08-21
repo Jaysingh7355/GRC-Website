@@ -127,8 +127,6 @@ const AboutUsPage: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Stats Section */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
