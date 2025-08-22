@@ -46,7 +46,7 @@ export default function GRCJaliPage() {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="min-h-screen bg-background shadow-lg ">
+      <div className="min-h-screen bg-background  ">
         {/* Hero Section */}
         <section className="relative h-[60vh]">
           <Image
