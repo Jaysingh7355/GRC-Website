@@ -4,34 +4,34 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
 const images = {
-  1: "/product/1.jpg",
-  2: "/product/2.jpg",
-  3: "/product/3.jpg",
-  4: "/product/4.jpg",
-  5: "/product/5.jpg",
-  6: "/product/6.jpg",
+  1: "/product/planter/1.webp",
+  2: "/product/planter/2.webp",
+  3: "/product/planter/3.webp",
+  4: "/product/planter/4.webp",
+  5: "/product/planter/5.webp",
+  6: "/product/planter/6.webp",
 };
 
 export default function GRCJaliPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background shadow-lg ">
       {/* Hero Section */}
       <section className="relative h-[60vh]">
         <Image
-          src="/product/jali-hero.jpg"
-          alt="GRC Jali Architectural Screen"
+          src="/product/planter/1.webp"
+          alt="GRC planter "
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
-            <h1 className="text-4xl font-bold mb-4">GRC Jali Screens</h1>
+            <h1 className="text-4xl font-bold mb-4">GRC Planter</h1>
             <p className="text-xl mb-8">
               Decorative yet Functional Architectural Elements for Modern
               Facades
             </p>
-            <Button variant="link" className="text-white" asChild>
+            <Button variant="destructive">
               <a href="/pages/contact">Get Custom Quote</a>
             </Button>
           </div>
@@ -39,37 +39,69 @@ export default function GRCJaliPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 px-6 lg:px-16 ">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="relative left-50  w-110 h-80 md:h-full rounded-2xl overflow-hidden shadow-lg">
+      <section className="py-16 px-6 lg:px-16 bg-background">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          {/* Left Side - Image */}
+          <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/product/1.jpg"
-              alt="Traditional and Modern GRC Jali Design"
+              src="/product/Planter/1.webp"
+              alt="GRC Planter"
               fill
               className="object-cover"
             />
           </div>
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold mb-6">What is GRC Jali?</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              A <strong>Jali</strong> is a perforated decorative screen
-              traditionally used in Indian architecture. Designed with intricate
-              geometric or floral patterns, it allows air and light to pass
-              through while maintaining privacy.
-              <br />
-              <br />
-              <strong>GRC Jali</strong> (Glassfiber Reinforced Concrete Jali) is
-              a modern adaptation of this heritage element. It combines the
-              strength of concrete with lightweight glass fibers, making it
-              highly durable, weather-resistant, and suitable for both
-              traditional and contemporary facades.
-            </p>
+
+          {/* Right Side - Content */}
+          <div className="space-y-8">
+            {/* What is GRC Planter */}
+            <div className="bg-white p-8 rounded-2xl shadow-md">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                🌿 What is a GRC Planter?
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                A{" "}
+                <strong>GRC planter (Glass Reinforced Concrete planter)</strong>{" "}
+                is a modern landscaping solution made from a strong yet
+                lightweight material called GRC. Unlike traditional stone or
+                ceramic planters, GRC planters are{" "}
+                <strong>durable, weather-resistant, and customizable</strong> in
+                any shape or finish. They are widely used in{" "}
+                <strong>
+                  gardens, homes, offices, hotels, and city landscaping projects
+                </strong>
+                .
+              </p>
+            </div>
+
+            {/* History Section */}
+
+            <div className="bg-white p-8 rounded-2xl shadow-md">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                📜 History of GRC Planters
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The story of GRC planters begins with the invention of{" "}
+                <strong>Glass Reinforced Concrete (GRC)</strong> in the{" "}
+                <strong>1970s in the UK</strong>. Originally, GRC was created
+                for architectural facades and decorative building elements
+                because of its strength and lightweight properties.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                By the <strong>1980s–1990s</strong>, designers and landscapers
+                began using GRC for{" "}
+                <strong>planters, fountains, and garden features</strong>, since
+                it could be shaped into beautiful designs while remaining
+                durable. Over time, GRC planters became popular across{" "}
+                <strong>Europe, Asia, and the Middle East</strong> as an
+                alternative to heavy stone and fragile ceramic planters.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section className="py-16 px-6 lg:px-16">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Why Choose GRC Jali?
+          Why Choose GRC Planter?
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
