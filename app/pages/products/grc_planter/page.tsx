@@ -76,7 +76,7 @@ export default function GRCJaliPage() {
             {/* Left Side - Image */}
             <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/product/Planter/2.webp"
+                src="/product/planter/2.webp"
                 alt="GRC Planter"
                 fill
                 className="object-cover"
