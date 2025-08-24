@@ -49,7 +49,7 @@ export default function GRCARch() {
                 Decorative yet Functional Architectural Elements for Modern
                 Facades
               </p>
-              <Button variant="link" className="text-white" asChild>
+              <Button variant="destructive" className="text-white" asChild>
                 <a href="/pages/contact">Get Custom Quote</a>
               </Button>
             </div>
@@ -122,7 +122,7 @@ export default function GRCARch() {
 
         <section className="py-16 px-6 lg:px-16">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Choose GRC Jali?
+            Why Choose GRC Arch?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -206,13 +206,13 @@ export default function GRCARch() {
             Material Comparison – Arches
           </h2>
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
+            <table className="w-full border border-collapse border-gray-200 rounded-xl shadow-md">
               <thead>
                 <tr className="">
                   <th className="text-left p-4">Feature</th>
-                  <th className="p-4">GRC Arch</th>
-                  <th className="p-4">Stone Arch</th>
-                  <th className="p-4">Wood Arch</th>
+                  <th className="text-left p-4">GRC Arch</th>
+                  <th className="text-left p-4">Stone Arch</th>
+                  <th className="text-left p-4">Wood Arch</th>
                 </tr>
               </thead>
               <tbody>
