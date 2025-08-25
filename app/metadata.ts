@@ -65,7 +65,8 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL("https://varanasigrc.com"),
 
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
 
