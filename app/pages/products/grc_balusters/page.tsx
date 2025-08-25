@@ -158,17 +158,17 @@ export default function GRCBlaster() {
 
       <section className="py-16 px-6 lg:px-16 rounded-2xl">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          Material Comparison - Baluster
+          Material Comparison - Balusters
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full border border-gray-200 rounded-xl shadow-md">
-            <thead >
+            <thead>
               <tr>
                 <th className="text-left p-4">Feature</th>
-                <th className="text-left p-4">GRC Blaster </th>
-                <th className="text-left p-4">Stone </th>
-                <th className="text-left p-4">Wood Jali</th>
-                <th className="text-left p-4">Metal Jali</th>
+                <th className="text-left p-4">GRC Baluster </th>
+                <th className="text-left p-4">Stone Baluster </th>
+                <th className="text-left p-4">Wood Baluster</th>
+                <th className="text-left p-4">Metal Baluster </th>
               </tr>
             </thead>
             <tbody>
@@ -220,9 +220,7 @@ export default function GRCBlaster() {
                   {row.map((cell, cellIndex) => (
                     <td
                       key={cellIndex}
-                      className={`p-4 ${
-                        cellIndex === 0 ? "font-medium " : ""
-                      }`}
+                      className={`p-4 ${cellIndex === 0 ? "font-medium " : ""}`}
                     >
                       {cell}
                     </td>
