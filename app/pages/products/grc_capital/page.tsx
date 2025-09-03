@@ -202,8 +202,6 @@ export default function GRCCapital() {
         </div>
         ;
       </section>
-
-      {/* CTA */}
       <section
         id="contact"
         className="py-10 px-12 lg:px-16 bg-muted/60 rounded-2xl  shadow-lg m-8 border-2
