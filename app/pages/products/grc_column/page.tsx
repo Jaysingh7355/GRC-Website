@@ -13,36 +13,36 @@ const images = {
   6: "/product/column/6.webp",
 };
 
-export default function GRCCapitals() {
+export default function GRCColumns() {
   return (
     <>
       <Head>
         <title>
-          GRC Capitals in India | Decorative Column Tops & Architectural Details
+          GRC Columns in India | Decorative & Structural Column Designs
         </title>
         <meta
           name="description"
-          content="Buy premium GRC Capitals in India – elegant, durable, and weather-resistant. Perfect for columns, facades, temples, villas & heritage restoration projects. Supplier of modern & classical capital designs across India."
+          content="Buy premium GRC Columns in India – strong, durable, and weather-resistant. Ideal for villas, facades, temples & heritage projects. Supplier of modern & classical GRC column designs across India."
         />
         <meta
           name="keywords"
-          content="GRC capital, GRC capitals India, decorative GRC column tops, modern GRC capitals, GRC facade capitals, GRC temple capitals, GRC classical capitals, buy GRC capitals online, capital supplier India, capital in Varanasi, capital in Delhi, capital in Bangalore, capital in Mumbai, capital in Hyderabad, capital in Lucknow, capital in Jaipur, capital in Ahmedabad"
+          content="GRC column, GRC columns India, decorative GRC pillars, modern GRC columns, GRC facade columns, GRC temple columns, GRC classical columns, buy GRC columns online, column supplier India, GRC column in Varanasi, column in Delhi, column in Bangalore, column in Mumbai, column in Hyderabad, column in Lucknow, column in Jaipur, column in Ahmedabad"
         />
-        <meta property="og:title" content="GRC Capitals in India" />
+        <meta property="og:title" content="GRC Columns in India" />
         <meta
           property="og:description"
-          content="Elegant, durable & weather-resistant GRC Capitals for columns, facades, and heritage architecture. Supplier of classical & modern capital designs across India."
+          content="Durable & elegant GRC Columns for facades, villas, temples & heritage restoration. Supplier of classical & modern column designs across India."
         />
-        <meta property="og:image" content="/product/capital/2.webp" />
+        <meta property="og:image" content="/product/column/2.webp" />
         <meta
           property="og:url"
-          content="https://www.varanasigrc.com/grc-capitals"
+          content="https://www.varanasigrc.com/grc-columns"
         />
         <meta property="og:type" content="website" />
 
         <meta name="author" content="Varanasi GRC Construction" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.varanasigrc.com/grc-capitals" />
+        <link rel="canonical" href="https://www.varanasigrc.com/grc-columns" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -51,17 +51,17 @@ export default function GRCCapitals() {
         <section className="relative h-[60vh]">
           <Image
             src="/product/column/1.webp"
-            alt="Decorative GRC Capital"
+            alt="Decorative GRC Column"
             fill
             className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <div className="text-center text-white max-w-4xl px-4">
-              <h1 className="text-4xl font-bold mb-4">GRC Capitals</h1>
+              <h1 className="text-4xl font-bold mb-4">GRC Columns</h1>
               <p className="text-xl mb-8">
-                Decorative Column Tops for Classical & Modern Architectural
-                Excellence
+                Decorative & Structural Columns for Classical & Modern
+                Architecture
               </p>
               <Button variant="link" className="text-white" asChild>
                 <a href="/pages/contact">Get Custom Quote</a>
@@ -76,7 +76,7 @@ export default function GRCCapitals() {
             <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src="/product/column/2.webp"
-                alt="GRC Capital Design"
+                alt="GRC Column Design"
                 fill
                 className="object-cover"
               />
@@ -84,25 +84,24 @@ export default function GRCCapitals() {
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-2xl shadow-md">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                  🏛️ What is a GRC Capital?
+                  🏛️ What is a GRC Column?
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   A{" "}
+                  <strong>GRC Column (Glass Reinforced Concrete Column)</strong>{" "}
+                  is a{" "}
+                  <strong>decorative or structural vertical element</strong>{" "}
+                  used in architecture to support beams, arches, or roofs while
+                  adding <strong>elegance and strength</strong>. Unlike
+                  traditional stone or marble columns,{" "}
                   <strong>
-                    GRC Capital (Glass Reinforced Concrete Capital)
-                  </strong>{" "}
-                  is the decorative topmost element of a{" "}
-                  <strong>column or pillar</strong>, used to enhance both{" "}
-                  <strong>structural elegance and visual appeal</strong>.
-                  Traditionally crafted from stone or marble, modern GRC
-                  capitals are{" "}
-                  <strong>
-                    lightweight, durable, weather-resistant, and customizable
+                    GRC columns are lightweight, durable, weather-resistant, and
+                    customizable
                   </strong>
-                  . They are commonly found in{" "}
+                  . They are widely used in{" "}
                   <strong>
-                    temples, villas, hotels, heritage restoration projects, and
-                    luxury facades
+                    temples, villas, luxury facades, hotels, and heritage
+                    restoration
                   </strong>
                   .
                 </p>
@@ -111,30 +110,28 @@ export default function GRCCapitals() {
               {/* History Section */}
               <div className="bg-white p-8 rounded-2xl shadow-md">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  📜 History of GRC Capitals
+                  📜 History of GRC Columns
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Capitals have been used since{" "}
-                  <strong>
-                    ancient Egyptian, Greek, and Roman architecture
-                  </strong>
-                  , symbolizing strength and artistry. Classical styles like{" "}
-                  <strong>Doric, Ionic, and Corinthian</strong> defined the
-                  grandeur of temples, palaces, and monuments.
+                  Columns have been the backbone of{" "}
+                  <strong>Egyptian, Greek, and Roman architecture</strong>,
+                  representing{" "}
+                  <strong>strength, stability, and artistic beauty</strong>.
+                  Famous styles like{" "}
+                  <strong>Doric, Ionic, and Corinthian</strong> defined ancient
+                  temples and palaces.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  With the development of{" "}
+                  With the advent of{" "}
                   <strong>Glass Reinforced Concrete (GRC)</strong> in the{" "}
-                  <strong>20th century</strong>, architects gained the ability
-                  to design{" "}
+                  <strong>20th century</strong>, architects began creating{" "}
                   <strong>
-                    intricate yet lightweight capitals for both modern and
-                    heritage projects
+                    lightweight, customizable columns with intricate details
                   </strong>
-                  . Today, GRC capitals are widely used in{" "}
+                  . Today, GRC columns are preferred in{" "}
                   <strong>
-                    cultural centers, luxury villas, religious architecture, and
-                    government buildings
+                    religious buildings, luxury villas, government structures,
+                    and cultural monuments
                   </strong>
                   .
                 </p>
@@ -150,11 +147,11 @@ export default function GRCCapitals() {
             <div className="grid gap-6">
               <div className="flex justify-between border-b pb-2">
                 <span>Thickness</span>
-                <span>20-50mm</span>
+                <span>30-80mm</span>
               </div>
               <div className="flex justify-between border-b pb-2">
-                <span>Weight</span>
-                <span>15-30 kg/unit</span>
+                <span>Height</span>
+                <span>Up to 20 ft (custom sizes available)</span>
               </div>
               <div className="flex justify-between border-b pb-2">
                 <span>Compressive Strength</span>
@@ -175,13 +172,13 @@ export default function GRCCapitals() {
           </h2>
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              "Classical Columns",
               "Temple Architecture",
-              "Facade Decoration",
               "Luxury Villas",
+              "Facade Decoration",
               "Hotels & Resorts",
               "Heritage Restoration",
               "Government Buildings",
+              "Banquet Halls",
               "Cultural Monuments",
             ].map((app, index) => (
               <Badge
@@ -198,27 +195,27 @@ export default function GRCCapitals() {
         {/* Comparison */}
         <section className="py-16 px-6 lg:px-16 rounded-2xl">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Material Comparison - Capitals
+            Material Comparison - Columns
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full border border-gray-200 rounded-xl shadow-md">
               <thead>
                 <tr>
                   <th className="text-left p-4">Feature</th>
-                  <th className="text-left p-4">GRC Capital</th>
-                  <th className="text-left p-4">Stone Capital</th>
-                  <th className="text-left p-4">Wood Capital</th>
-                  <th className="text-left p-4">Metal Capital</th>
+                  <th className="text-left p-4">GRC Column</th>
+                  <th className="text-left p-4">Stone Column</th>
+                  <th className="text-left p-4">Wood Column</th>
+                  <th className="text-left p-4">Metal Column</th>
                 </tr>
               </thead>
               <tbody>
                 {[
                   [
                     "Lifespan",
-                    "50+ years with minimal wear",
-                    "100+ years (but prone to cracks & heavy weight)",
-                    "15-25 years (susceptible to termites & decay)",
-                    "30-40 years (can rust or corrode)",
+                    "50+ years with minimal maintenance",
+                    "100+ years (but very heavy & costly)",
+                    "15-25 years (prone to termites & decay)",
+                    "30-40 years (risk of corrosion)",
                   ],
                   [
                     "Maintenance",
@@ -229,24 +226,24 @@ export default function GRCCapitals() {
                   ],
                   [
                     "Cost/unit",
-                    "₹3000-6000 (affordable & elegant)",
-                    "₹10000-20000 (very expensive)",
-                    "₹2000-4000 (cheaper but less durable)",
-                    "₹5000-9000 (moderate cost)",
+                    "₹6000-15000 (affordable premium look)",
+                    "₹20000-50000 (very expensive)",
+                    "₹5000-10000 (cheaper but weak)",
+                    "₹10000-20000 (moderate cost)",
                   ],
                   [
                     "Weight",
-                    "Lightweight – easy to install",
-                    "Very heavy – requires skilled labor",
-                    "Light – but weak over time",
+                    "Lightweight – easy installation",
+                    "Very heavy – needs skilled labor",
+                    "Light – but less durable",
                     "Moderate – depends on thickness",
                   ],
                   [
                     "Design Flexibility",
-                    "Highly customizable (classical & modern styles)",
+                    "Highly customizable (classical & modern)",
                     "Limited to carving styles",
-                    "Custom designs possible but less durable",
-                    "Custom designs possible but costly",
+                    "Custom possible but less durable",
+                    "Custom possible but costly",
                   ],
                 ].map((row, index) => (
                   <tr key={index} className="border-t">
@@ -280,7 +277,7 @@ export default function GRCCapitals() {
               >
                 <Image
                   src={src}
-                  alt={`GRC Capital ${key}`}
+                  alt={`GRC Column ${key}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 33vw"
@@ -298,7 +295,7 @@ export default function GRCCapitals() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Start Your Project</h2>
             <p className="mb-8">
-              Get expert consultation for custom GRC Capital designs
+              Get expert consultation for custom GRC Column designs
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button variant="secondary" asChild>
