@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Yantramanav } from "next/font/google";
+import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 import { siteMetadata } from "./metadata";
 import "./globals.css";
@@ -15,20 +15,9 @@ const WhatsAppButton = dynamic(
   () => import("@/app/components/whatsapp/WhatsAppButton")
 );
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const Inter1 = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const yantramanav = Yantramanav({
-  variable: "--font-yantramanav",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100","200","300","400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -53,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${yantramanav.variable}`}
+      className={`${Inter1.className} bg-white text-slate-900 antialiased`}
       suppressHydrationWarning
     >
       <head>
