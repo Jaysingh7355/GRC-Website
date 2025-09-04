@@ -21,7 +21,7 @@ export default function GRCCapital() {
           src="/product/jali-hero.jpg"
           alt="GRC Jali Architectural Screen"
           fill
-          className="object-cover"
+          className="object-cover" 
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">

@@ -26,10 +26,26 @@ export default function GRCARch() {
         />
         <meta
           name="keywords"
-          content="GRC arch, GRC arches India, decorative GRC arches, architectural GRC arch designs, GRC entrance arch, GRC temple arch, GRC facade arch, GRC products India"
+          content="GRC arch, GRC arches India, decorative GRC arches, architectural GRC arch designs, GRC entrance arch, GRC temple arch, GRC facade arch, GRC products India, modern GRC arches, custom GRC arch supplier"
         />
+
+        {/* Open Graph / Social Media SEO */}
+        <meta property="og:title" content="GRC Arches in India" />
+        <meta
+          property="og:description"
+          content="Durable, lightweight & customizable GRC arches for facades, entrances, temples, and landmarks across India."
+        />
+        <meta property="og:image" content="/product/arches.jpg" />
+        <meta
+          property="og:url"
+          content="https://www.varanasigrc.com/grc-arches"
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="author" content="Varanasi GRC Construction" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.varanasigrc.com/grc-arches" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       <div className="min-h-screen bg-background">
