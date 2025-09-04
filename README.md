@@ -8,7 +8,6 @@ The goal of this website is to:
 - Present GRC products in a modern and professional way
 - Improve SEO ranking to attract new clients across India
 - Provide an easy way for users to **inquire, call, or email** directly from the site
-
 ---
 
 ## 🚀 Features
@@ -35,14 +34,10 @@ The goal of this website is to:
 - **UI Components:** shadcn/ui
 - **Deployment:** Vercel (recommended) or any Node hosting
 - **SEO Enhancements:** `<Head>` tags + Open Graph + Canonical links
-
+- **Database:**  Dynmodb
+- **Backend:** Express,node 
 ---
 
-## 📦 Installation & Setup
 
-Clone the repository:
 
-```bash
-git clone https://github.com/yourusername/grcvaranasi.git
-cd grcvaranasi
-```
+

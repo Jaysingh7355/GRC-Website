@@ -57,7 +57,7 @@ export default function GRCBlaster() {
         <section className="relative h-[60vh]">
           <Image
             src="/product/balusters/2.webp"
-            alt="GRC Jali Architectural Screen"
+            alt="GRC balusters Architectural Screen"
             fill
             className="object-cover"
             priority
