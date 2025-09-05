@@ -5,47 +5,44 @@ import { Card } from "@/components/ui/card";
 import Head from "next/head";
 
 const images = {
-  1: "/product/brackets/1.webp",
-  2: "/product/jali/2.webp",
-  3: "/product/panel/3.webp",
-  4: "/product/motif/4.webp",
-  5: "/product/dome/5.webp",
-  6: "/product/arch/6.webp",
+  1: "/product/domes/1.webp",
+  2: "/product/domes/2.webp",
+  3: "/product/domes/3.webp",
+  4: "/product/domes/4.webp",
+  5: "/product/domes/5.webp",
+  6: "/product/domes/6.webp",
 };
 
-export default function GRCDecorativeElements() {
+export default function GRCDomes() {
   return (
     <>
       <Head>
         <title>
-          GRC Decorative Elements in India | Brackets, Jalis, Panels & Motifs
+          GRC Domes in India | Architectural & Decorative Dome Structures
         </title>
         <meta
           name="description"
-          content="Buy premium GRC Decorative Elements in India – including brackets, jalis, panels, domes & motifs. Durable, elegant, and weather-resistant. Perfect for facades, villas, temples & heritage projects."
+          content="Buy premium GRC Domes in India – elegant, durable, and weather-resistant. Perfect for temples, mosques, palaces, villas & heritage restoration projects. Supplier of classical & modern dome designs across India."
         />
         <meta
           name="keywords"
-          content="GRC decorative elements, GRC brackets, GRC jali, GRC panels, GRC motifs, GRC domes, decorative GRC India, GRC architecture, GRC facade elements, GRC Varanasi, GRC supplier India"
+          content="GRC dome, GRC domes India, decorative GRC dome, modern GRC domes, classical GRC dome, mosque dome, temple dome, palace dome, buy GRC dome online, dome supplier India, domes in Varanasi, domes in Delhi, domes in Bangalore, domes in Mumbai, domes in Hyderabad, domes in Lucknow, domes in Jaipur, domes in Ahmedabad"
         />
-        <meta property="og:title" content="GRC Decorative Elements in India" />
+        <meta property="og:title" content="GRC Domes in India" />
         <meta
           property="og:description"
-          content="Premium GRC Decorative Elements – brackets, jalis, panels, domes, and motifs. Lightweight, durable, and elegant designs for facades, interiors, temples & luxury architecture."
+          content="Elegant, durable & weather-resistant GRC Domes for temples, palaces, mosques, villas, and heritage architecture. Supplier of classical & modern dome designs across India."
         />
-        <meta property="og:image" content="/product/decorative/hero.webp" />
+        <meta property="og:image" content="/product/domes/2.webp" />
         <meta
           property="og:url"
-          content="https://www.varanasigrc.com/grc-decorative-elements"
+          content="https://www.varanasigrc.com/grc-domes"
         />
         <meta property="og:type" content="website" />
 
         <meta name="author" content="Varanasi GRC Construction" />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://www.varanasigrc.com/grc-decorative-elements"
-        />
+        <link rel="canonical" href="https://www.varanasigrc.com/grc-domes" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
@@ -53,20 +50,18 @@ export default function GRCDecorativeElements() {
         {/* Hero Section */}
         <section className="relative h-[60vh]">
           <Image
-            src="/product/decorative/hero.webp"
-            alt="Decorative GRC Elements"
+            src="/product/domes/1.webp"
+            alt="Decorative GRC Dome"
             fill
             className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <div className="text-center text-white max-w-4xl px-4">
-              <h1 className="text-4xl font-bold mb-4">
-                GRC Decorative Elements
-              </h1>
+              <h1 className="text-4xl font-bold mb-4">GRC Domes</h1>
               <p className="text-xl mb-8">
-                Brackets, Jalis, Panels, Domes & Motifs for Timeless
-                Architecture
+                Architectural & Decorative Dome Structures for Temples, Palaces
+                & Villas
               </p>
               <Button variant="link" className="text-white" asChild>
                 <a href="/pages/contact">Get Custom Quote</a>
@@ -80,8 +75,8 @@ export default function GRCDecorativeElements() {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
             <div className="relative w-full h-80 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
               <Image
-                src="/product/decorative/2.webp"
-                alt="GRC Decorative Element"
+                src="/product/domes/2.webp"
+                alt="GRC Dome Design"
                 fill
                 className="object-cover"
               />
@@ -89,52 +84,53 @@ export default function GRCDecorativeElements() {
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-2xl shadow-md">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                  🏛️ What are GRC Decorative Elements?
+                  🏛️ What is a GRC Dome?
                 </h2>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  <strong>GRC Decorative Elements</strong> include brackets,
-                  jalis, panels, domes, motifs, finials, and other custom
-                  designs crafted from{" "}
-                  <strong>Glass Reinforced Concrete (GRC)</strong>. These
-                  elements are{" "}
+                  A <strong>GRC Dome (Glass Reinforced Concrete Dome)</strong>{" "}
+                  is an
+                  <strong> architectural and decorative structure</strong>{" "}
+                  widely used in
                   <strong>
-                    lightweight, durable, weather-resistant, and highly
-                    customizable
+                    temples, mosques, palaces, villas, hotels, and cultural
+                    monuments
                   </strong>
-                  . They enhance{" "}
+                  . Traditionally built from heavy stone or brick, modern GRC
+                  domes are
                   <strong>
-                    facades, interiors, temples, villas, hotels, and heritage
-                    buildings
+                    lightweight, durable, weather-resistant, and customizable
                   </strong>
-                  , offering timeless beauty with modern strength.
+                  , making them ideal for both classical and contemporary
+                  architecture.
                 </p>
               </div>
 
               {/* History Section */}
               <div className="bg-white p-8 rounded-2xl shadow-md">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  📜 History of Decorative Elements
+                  📜 History of Domes
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Decorative architectural elements have been used since{" "}
-                  <strong>ancient civilizations</strong> to add{" "}
-                  <strong>character, symbolism, and grandeur</strong> to
-                  buildings. From{" "}
-                  <strong>Indian temples to Roman palaces</strong>, brackets,
-                  jalis, and motifs defined cultural heritage.
+                  Domes have been a{" "}
+                  <strong>symbol of grandeur and spirituality</strong>
+                  since{" "}
+                  <strong>
+                    ancient Roman, Byzantine, and Mughal architecture
+                  </strong>
+                  . They crowned{" "}
+                  <strong>palaces, mosques, temples, and monuments</strong>
+                  as a mark of beauty and power.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  With the advent of{" "}
-                  <strong>GRC technology in the 20th century</strong>,
-                  architects can now design{" "}
+                  With the invention of{" "}
+                  <strong>Glass Reinforced Concrete (GRC)</strong>
+                  in the <strong>20th century</strong>, architects could design
+                  <strong>large yet lightweight domes</strong> with
+                  <strong>intricate detailing</strong>, making them a popular
+                  choice for
                   <strong>
-                    intricate yet lightweight elements that combine tradition
-                    with modern innovation
-                  </strong>
-                  . GRC decorative elements are now widely used in{" "}
-                  <strong>
-                    heritage restoration, luxury homes, temples, hotels, and
-                    commercial projects
+                    religious structures, luxury villas, and heritage
+                    restoration projects
                   </strong>
                   .
                 </p>
@@ -150,11 +146,13 @@ export default function GRCDecorativeElements() {
             <div className="grid gap-6">
               <div className="flex justify-between border-b pb-2">
                 <span>Thickness</span>
-                <span>10-40mm (depending on element)</span>
+                <span>20-60mm</span>
               </div>
               <div className="flex justify-between border-b pb-2">
                 <span>Weight</span>
-                <span>Varies by design (Lightweight)</span>
+                <span>
+                  Varies by size (lightweight compared to stone domes)
+                </span>
               </div>
               <div className="flex justify-between border-b pb-2">
                 <span>Compressive Strength</span>
@@ -175,14 +173,14 @@ export default function GRCDecorativeElements() {
           </h2>
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              "Facade Decoration",
               "Temple Architecture",
+              "Mosques & Minarets",
+              "Palaces & Forts",
               "Luxury Villas",
               "Hotels & Resorts",
+              "Cultural Monuments",
               "Heritage Restoration",
-              "Commercial Buildings",
-              "Interior Partitions (Jali)",
-              "Custom Motifs & Panels",
+              "Government Buildings",
             ].map((app, index) => (
               <Badge
                 key={index}
@@ -198,17 +196,17 @@ export default function GRCDecorativeElements() {
         {/* Comparison */}
         <section className="py-16 px-6 lg:px-16 rounded-2xl">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Material Comparison - Decorative Elements
+            Material Comparison - Domes
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full border border-gray-200 rounded-xl shadow-md">
               <thead>
                 <tr>
                   <th className="text-left p-4">Feature</th>
-                  <th className="text-left p-4">GRC Elements</th>
-                  <th className="text-left p-4">Stone</th>
-                  <th className="text-left p-4">Wood</th>
-                  <th className="text-left p-4">Plaster</th>
+                  <th className="text-left p-4">GRC Dome</th>
+                  <th className="text-left p-4">Stone Dome</th>
+                  <th className="text-left p-4">Brick Dome</th>
+                  <th className="text-left p-4">Plaster Dome</th>
                 </tr>
               </thead>
               <tbody>
@@ -216,37 +214,37 @@ export default function GRCDecorativeElements() {
                   [
                     "Lifespan",
                     "50+ years with minimal wear",
-                    "100+ years (but very heavy & costly)",
-                    "15-20 years (prone to decay)",
-                    "10-15 years (prone to cracks)",
+                    "100+ years (but very heavy & cracks over time)",
+                    "40-60 years (requires regular maintenance)",
+                    "10-15 years (prone to cracks & damage)",
                   ],
                   [
                     "Maintenance",
-                    "Low – durable & weather resistant",
-                    "High – polishing & sealing required",
-                    "High – termite & moisture protection",
-                    "Moderate – fragile surface",
+                    "Very Low – durable & weather resistant",
+                    "High – sealing & polishing required",
+                    "Moderate – prone to leakage & plastering",
+                    "High – surface damage & repainting needed",
                   ],
                   [
                     "Cost",
-                    "Affordable & elegant",
-                    "Very expensive",
-                    "Moderate (less durable)",
-                    "Cheap but weak",
+                    "₹2000-6000/sq.ft (affordable & elegant)",
+                    "₹8000-15000/sq.ft (very expensive)",
+                    "₹3000-5000/sq.ft (moderate)",
+                    "₹1000-2000/sq.ft (cheap but weak)",
                   ],
                   [
                     "Weight",
                     "Lightweight – easy to install",
-                    "Very heavy – requires skilled labor",
-                    "Light but weak",
-                    "Lightweight but brittle",
+                    "Very heavy – requires strong foundation",
+                    "Heavy – increases structural load",
+                    "Lightweight but fragile",
                   ],
                   [
                     "Design Flexibility",
-                    "Highly customizable (intricate & modern)",
-                    "Limited carving styles",
-                    "Custom but less durable",
-                    "Custom possible but fragile",
+                    "Highly customizable (classical & modern styles)",
+                    "Limited – only traditional carvings",
+                    "Moderate – restricted shapes",
+                    "Limited – fragile for detailing",
                   ],
                 ].map((row, index) => (
                   <tr key={index} className="border-t">
@@ -280,7 +278,7 @@ export default function GRCDecorativeElements() {
               >
                 <Image
                   src={src}
-                  alt={`GRC Decorative Element ${key}`}
+                  alt={`GRC Dome ${key}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 33vw"
@@ -298,7 +296,7 @@ export default function GRCDecorativeElements() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Start Your Project</h2>
             <p className="mb-8">
-              Get expert consultation for custom GRC Decorative Elements
+              Get expert consultation for custom GRC Dome designs
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button variant="secondary" asChild>
