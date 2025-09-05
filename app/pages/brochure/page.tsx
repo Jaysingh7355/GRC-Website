@@ -50,7 +50,7 @@ const BrochurePage = () => {
           </div>
         </div>
 
-        {/* Main Content Grid */}
+        
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Download Card */}
           <div className="bg-card rounded-xl shadow-lg border p-6">
