@@ -58,7 +58,7 @@ export default function GRCJaliPage() {
           />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <div className="text-center text-white max-w-4xl px-4">
-              <h1 className="text-4xl font-bold mb-4">GRC Planter</h1>
+              <h1 className="text-4xl font-bold mb-4">GRC Planters</h1>
               <p className="text-xl mb-8">
                 Decorative yet Functional Architectural Elements for Modern
                 Facades
