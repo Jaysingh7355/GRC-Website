@@ -26,7 +26,7 @@ export default function GRCJaliPage() {
         />
         <meta
           name="keywords"
-          content="GRC planter, planterin lower price planter supplier India, buy planter online, garden planters India, concrete planters, decorative planters, outdoor planters India planter in varanasi, planter in banglore, planter in delhi, planter in mumbai, planter in kolkata, planter in chennai, planter in hyderabad, planter in pune, planter in ahmedabad, planter in jaipur, planter in lucknow planter in kanpur, planter in nagpur, planter in indore, planter in thiruvananthapuram, planter in coimbatore, planter in visakhapatnam  planter in vadodara, planter in surat, planter in mysore, planter in hubli, planter in mangalore, planter in gorakhpur, planter in agra, planter in varanasi, planter in amritsar"
+          content="GRC planters, planters in lower price planters supplier India, buy planter online, garden planters India, concrete planters, decorative planters, outdoor planters India planter in varanasi, planter in banglore, planter in delhi, planter in mumbai, planter in kolkata, planter in chennai, planter in hyderabad, planter in pune, planter in ahmedabad, planter in jaipur, planter in lucknow planter in kanpur, planter in nagpur, planter in indore, planter in thiruvananthapuram, planter in coimbatore, planter in visakhapatnam  planter in vadodara, planter in surat, planter in mysore, planter in hubli, planter in mangalore, planter in gorakhpur, planter in agra, planter in varanasi, planter in amritsar"
         />
 
         {/* Open Graph / Social Media SEO */}

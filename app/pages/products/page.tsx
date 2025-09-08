@@ -56,7 +56,7 @@ const products = [
     image: "grc_pillar",
   },
   {
-    name: "GRC Noise Barrier",
+    name: "Noise Barrier",
     image: "grc_noise_barrier",
   },
   {
@@ -67,10 +67,7 @@ const products = [
     name: "GRC Fountains",
     image: "grc_fountain",
   },
-  {
-    name: "GRC Sculpture And Mural",
-    image: "grc_sculpture_mural",
-  },
+
   {
     name: "GRC Planter",
     image: "grc_planter",
