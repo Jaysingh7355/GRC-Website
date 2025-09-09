@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import Head from "next/head";
 
@@ -93,7 +92,6 @@ export default function GRCJaliPage() {
       </Head>
 
       <div className="min-h-screen bg-background">
-        {/* Hero Section */}
         <section className="relative h-[60vh]">
           <Image
             src="/product/jali-hero.jpg"
