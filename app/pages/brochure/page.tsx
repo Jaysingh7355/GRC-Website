@@ -4,10 +4,28 @@ import { FiDownload, FiPhone, FiMapPin, FiInfo } from "react-icons/fi";
 import Head from "next/head";
 
 const BrochurePage = () => {
+  const handleDownloadClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const fileUrl = "/Brochure.pdf";
+    // Optional: Check if file exists (client-side check is limited, server-side is better)
+    fetch(fileUrl)
+      .then((response) => {
+        if (!response.ok) {
+          alert(
+            "Sorry, the brochure file is not available. Please contact support."
+          );
+          e.preventDefault();
+        }
+      })
+      .catch(() => {
+        alert("Error accessing the brochure file. Please contact support.");
+        e.preventDefault();
+      });
+  };
+
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
       <Head>
-        <title>Brocher | varanasi Grc </title>
+        <title>Brochure | Varanasi GRC</title>
         <meta
           name="description"
           content="Download the official Varanasi GRC brochure to explore our GRC products including Jalis, Columns, Panels, and custom designs. Get detailed information in one place."
@@ -32,7 +50,7 @@ const BrochurePage = () => {
                 <FiMapPin className="text-primary" />
                 <span>
                   Gate, Kunwar Road, near Indian Oil Petrol Pump, Belawa,
-                  varanasi
+                  Varanasi
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -50,7 +68,6 @@ const BrochurePage = () => {
           </div>
         </div>
 
-        
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Download Card */}
           <div className="bg-card rounded-xl shadow-lg border p-6">
@@ -73,8 +90,9 @@ const BrochurePage = () => {
               </div>
               <div>
                 <a
-                  href="public/Brochure.pdf"
+                  href="/Brochure.pdf"
                   download
+                  onClick={handleDownloadClick}
                   className="w-full bg-primary text-primary-foreground px-6 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors duration-200 flex items-center justify-center gap-2"
                 >
                   <FiDownload className="w-5 h-5" />
