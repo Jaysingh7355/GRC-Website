@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 
 const ContactUs = () => {
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -32,7 +32,7 @@ const ContactUs = () => {
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
-     const res = await axios.post("/api/Inquiry",formData);
+      await axios.post("/api/Inquiry",formData);
      setSuccess("Message sent successfully!");
      
      setFormData({
