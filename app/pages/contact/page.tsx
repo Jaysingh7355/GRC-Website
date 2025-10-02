@@ -30,12 +30,13 @@ const ContactUs = () => {
   };
 
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  setLoading(true)
+   setLoading(true)
     e.preventDefault()
     try {
       await axios.post("/api/Inquiry",formData);
+      
      setSuccess("Message sent successfully!");
-     
+      setLoading(false)
      setFormData({
       name:"",
       email:"",

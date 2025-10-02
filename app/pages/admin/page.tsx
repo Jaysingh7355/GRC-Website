@@ -15,7 +15,9 @@ const generateMockData = () => {
   const statuses = ["pending", "resolved"];
   const mockInquiries = [];
 
-  for (let i = 1; i <= 120; i++) {
+  
+
+  for (let i = 1; i <= 20; i++) {
     mockInquiries.push({
       id: i,
       name: `Customer ${i}`,
