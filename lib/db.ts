@@ -15,7 +15,7 @@ const connect = async () => {
 
   try {
     await mongoose.connect(MONGODB_URL!, {
-      dbName: "nextjs_api_making",
+      dbName: "varanasigrc_db",
       bufferCommands: true,
     });
     console.log("Connected to MongoDB");

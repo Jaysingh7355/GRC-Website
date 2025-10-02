@@ -2,33 +2,50 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import { FiMapPin, FiPhone, FiMail, FiCheckCircle } from "react-icons/fi";
+import axios from 'axios';
+import { useEffect } from "react";
+
+
 
 const ContactUs = () => {
+    const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
-
+   
+  useEffect(()=>{
+    if(success){
+      const timer = setTimeout(()=>setSuccess(null),5000)
+      return () => clearTimeout(timer)
+    }
+  },[success])
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(null);
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+     const res = await axios.post("/api/Inquiry",formData);
+     setSuccess("Message sent successfully!");
+     
+     setFormData({
+      name:"",
+      email:"",
+      phone:"",
+      message:"",
+     });
 
-    setTimeout(() => {
-      setSuccess("Message sent successfully!");
-      setLoading(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 1000);
+    } catch (err) {
+      console.log("Error in subming Inquray:",err)
+      setSuccess("faild to submit inquiry")
+    }
   };
 
   return (
