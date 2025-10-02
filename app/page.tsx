@@ -58,6 +58,7 @@ export default function Home() {
       (prevIndex) =>
         (prevIndex - projectsPerPage + totalProjects) % totalProjects
     );
+
   }, [projectsPerPage, totalProjects]);
 
   useEffect(() => {
@@ -66,7 +67,7 @@ export default function Home() {
   }, [nextSlide]);
 
   return (
-    <div>
+    <div className="">
       <Head>
         <title>Best GRC Products in India | GFRC Manufacturer Varanasi</title>
 
@@ -283,9 +284,9 @@ export default function Home() {
               <thead>
                 <tr className="bg-[hsl(var(--background))]">
                   <th className="p-4 text-left">Property</th>
-                  <th className="p-4">GRC</th>
-                  <th className="p-4">Concrete</th>
-                  <th className="p-4">Wood</th>
+                  <th className="p-4 text-left">GRC</th>
+                  <th className="p-4 text-left">Concrete</th>
+                  <th className="p-4 text-left">Wood</th>
                 </tr>
               </thead>
               <tbody>

@@ -100,13 +100,20 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@layer base {loginAdmin
-  * {
+@layer base {
+  loginAdmin * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::selection {
+  background-color: theme(
+    "colors.blue.500"
+  ); 
+  color: white; 
 }
 
 :root {

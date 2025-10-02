@@ -172,7 +172,7 @@ export default function ProjectsPage() {
             ))}
           </div>
         </section>
-        <div className="mt-16 text-center bg-card p-8 rounded-lg shadow-lg border">
+        <div className="m-4 text-center bg-card p-8 rounded-lg shadow-lg border ">
           <h2 className="text-2xl font-bold text-foreground mb-4">
             Custom GRC Solutions
           </h2>

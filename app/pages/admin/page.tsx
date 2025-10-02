@@ -137,7 +137,7 @@ export default function AdminDashboard() {
                         {inq.date.toLocaleDateString()}
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
+                    <td className="px-6 py-4 whitespace-nowrap">                      
                       <span
                         className={`px-2 py-1 text-xs rounded-full font-medium ${
                           inq.status === "pending"

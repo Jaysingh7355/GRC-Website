@@ -40,7 +40,7 @@ export async function POST(request: Request): Promise<Response> {
     }
 
     if (!requestBody?.image?.trim()) {
-      validationErrors.image = "Image path is required";
+      validationErrors.image = "Image path  is required";
     }
 
     if (Object.keys(validationErrors).length > 0) {
