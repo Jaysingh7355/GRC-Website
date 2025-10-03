@@ -11,35 +11,47 @@ import {
   FiClock,
 } from "react-icons/fi";
 
-const generateMockData = () => {
-  const statuses = ["pending", "resolved"];
-  const mockInquiries = [];
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Phone } from "lucide-react";
 
-  
-
-  for (let i = 1; i <= 20; i++) {
-    mockInquiries.push({
-      id: i,
-      name: `Customer ${i}`,
-      email: `customer${i}@example.com`,
-      phone: `+1 (555) ${Math.floor(1000 + Math.random() * 9000)}-${Math.floor(
-        1000 + Math.random() * 9000
-      )}`,
-      message: `This is a sample inquiry message #${i} about product questions or service issues.`,
-      status: statuses[Math.floor(Math.random() * statuses.length)],
-      date: new Date(
-        Date.now() - Math.floor(Math.random() * 7 * 24 * 60 * 60 * 1000)
-      ),
-    });
-  }
-
-  return mockInquiries;
+type Inquiry = {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  phone?: string;
+  status?: string;
+  date?: Date;
 };
 
-export default function AdminDashboard() {
-  const inquiries = generateMockData();
-  const pendingCount = inquiries.filter((i) => i.status === "pending").length;
-  const resolvedCount = inquiries.filter((i) => i.status === "resolved").length;
+
+
+
+
+
+
+export default function Admin() {
+   const [inquiries, setInquiries] = useState<Inquiry[]>([])
+
+const [loading, setLoading] = useState(true)
+ 
+   useEffect(()=>{
+    const Iquiries = async () => {
+     try {
+      const res = await axios.get("/api/Inquiry");
+      const data = res.data;
+      setInquiries(res.data.data);
+     } catch (error) {
+      console.log("error featching api", error) 
+     }finally{
+      setLoading(false)
+     }
+    }
+    Iquiries()
+   },[]) 
+
+   console.log(inquiries)
 
   return (
     <>
@@ -71,7 +83,7 @@ export default function AdminDashboard() {
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Pending</p>
-                <p className="text-2xl font-bold">{pendingCount}</p>
+                <p className="text-2xl font-bold">{20}</p>
               </div>
             </div>
           </div>
@@ -83,7 +95,7 @@ export default function AdminDashboard() {
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Resolved</p>
-                <p className="text-2xl font-bold">{resolvedCount}</p>
+                <p className="text-2xl font-bold">{20}</p>
               </div>
             </div>
           </div>
@@ -116,11 +128,12 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {inquiries.map((inq) => (
+                {inquiries&&inquiries.map((inq) => (
+                  
                   <tr key={inq.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-medium text-gray-900">
-                        {inq.name}
+                        {inq.name  }
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -136,7 +149,7 @@ export default function AdminDashboard() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-500">
-                        {inq.date.toLocaleDateString()}
+                        {12}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">                      
