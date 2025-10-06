@@ -1,4 +1,4 @@
-// app/admin/page.tsx
+
 "use client";
 
 import {
@@ -24,12 +24,6 @@ type Inquiry = {
   status?: string;
   date?: Date;
 };
-
-
-
-
-
-
 
 export default function Admin() {
    const [inquiries, setInquiries] = useState<Inquiry[]>([])
