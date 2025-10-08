@@ -26,7 +26,6 @@ type Inquiry = {
 export default function Admin() {
     const [inquiries, setInquiries] = useState<Inquiry[]>([]);
 
-
     useEffect(() => {
         const Iquiries = async () => {
             try {
@@ -44,7 +43,6 @@ export default function Admin() {
 
     return (
         <>
-            (
             <div className="min-h-screen bg-gray-50 p-6">
                 {/* Header */}
                 <header className="mb-8 flex-1/2 items-center justify-center">
@@ -162,7 +160,6 @@ export default function Admin() {
                     </div>
                 </div>
             </div>
-            )
         </>
     );
 }
