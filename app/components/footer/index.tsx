@@ -16,7 +16,6 @@ const Footer = () => {
             modern infrastructure and design needs.
           </p>
         </div>
-
         {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-3">Quick Links</h3>
