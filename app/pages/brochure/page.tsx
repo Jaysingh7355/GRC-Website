@@ -6,7 +6,6 @@ import Head from 'next/head';
 const BrochurePage = () => {
     const handleDownloadClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         const fileUrl = '/Brochure.pdf';
-        // Optional: Check if file exists (client-side check is limited, server-side is better)
         fetch(fileUrl)
             .then((response) => {
                 if (!response.ok) {
@@ -35,10 +34,9 @@ const BrochurePage = () => {
             </Head>
 
             <div className="mx-auto max-w-6xl">
-                {/* Header Section */}
                 <div className="mb-12 text-center">
                     <h1 className="text-foreground mb-4 text-4xl font-extrabold">
-                        <span className="border-primary border-b-4 pb-2">
+                        <span className="border-primary md:border-b-4 pb-2 :border-none ">
                             Varanasi GRC Construction Solutions
                         </span>
                     </h1>

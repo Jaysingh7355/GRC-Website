@@ -10,11 +10,10 @@ const WhatsAppButton = () => {
             href="https://wa.me/7355989418"
             target="_blank"
             rel="noopener noreferrer"
-            className="group fixed right-6 bottom-4 z-50"
+            className="group fixed right-6 bottom-4 z-50 flex items-center"
             aria-label="Chat with us on WhatsApp"
         >
-            <span className="bg-green-800 text-lg font-medium text-white 
-                opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span className="bg-green-800 text-lg font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 click here to WhatsApp
             </span>
             <Button
