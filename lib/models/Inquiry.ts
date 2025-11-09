@@ -1,19 +1,19 @@
 import mongoose, { Schema, Model, Document } from "mongoose";
 
-// 1. Stronger typing for status values
-type InquiryStatus = "pending" | "resolved" | "archived"; // Added archive option for future use
 
-// 2. Enhanced interface with additional metadata
+type InquiryStatus = "pending" | "resolved" | "archived"; 
+
+
 interface IInquiry extends Document {
   name: string;
   email: string;
   phone: string;
   message: string;
   status: InquiryStatus;
-  source?: string; // Track where inquiry came from (website, phone, etc.)
-  ipAddress?: string; // For analytics
-  resolvedAt?: Date; // Track resolution time
-  createdAt?: Date; // Automatically added by Mongoose timestamps
+  source?: string; 
+  ipAddress?: string; 
+  resolvedAt?: Date; 
+  createdAt?: Date; 
 }
 
 // 3. Schema with validation and indexes
