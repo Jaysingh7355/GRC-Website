@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { unique } from 'next/dist/build/utils';
+// import { unique } from 'next/dist/build/utils';
 
 export interface IAdmin extends Document {
     username: string;
@@ -7,7 +7,7 @@ export interface IAdmin extends Document {
 }
 
 const AdminSchema = new Schema<IAdmin>({
-    username: { type: String, require: [true, "plase provide Username"], unique: true },
+    username: { type: String, required: [true, "plase provide Username"], unique: true },
     password: { type: String, required: true },
 });
 
