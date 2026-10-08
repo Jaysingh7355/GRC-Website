@@ -22,8 +22,10 @@ export const authConfig = {
                 try {
                     await connectDB();
 
-                    const username = typeof credentials?.username === 'string' ? credentials.username : '';
-                    const password = typeof credentials?.password === 'string' ? credentials.password : '';
+                    const username =
+                        typeof credentials?.username === 'string' ? credentials.username : '';
+                    const password =
+                        typeof credentials?.password === 'string' ? credentials.password : '';
 
                     const user = await Admin.findOne({ username });
                     if (!user) {
@@ -48,13 +50,13 @@ export const authConfig = {
         }),
     ],
     pages: {
-        signIn: '/pages/login',
-        error: '/pages/login',
+        signIn: '/login',
+        error: '/login',
     },
     session: {
         strategy: 'jwt' as const,
     },
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: process.env.NEXTAUTH_SECRET ?? process.env.AUTH_SECRET,
     trustHost: true,
 } satisfies NextAuthConfig;
 
