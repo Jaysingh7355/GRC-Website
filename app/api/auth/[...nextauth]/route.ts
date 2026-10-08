@@ -1,3 +1,15 @@
-import { handlers } from '@/auth';
+export const dynamic = 'force-dynamic';
 
-export const { GET, POST } = handlers;
+export async function GET() {
+    return Response.json({
+        ok: true,
+        message: 'Frontend deployment mode: auth is disabled for now.',
+    });
+}
+
+export async function POST() {
+    return Response.json({
+        ok: true,
+        message: 'Frontend deployment mode: auth is disabled for now.',
+    });
+}
